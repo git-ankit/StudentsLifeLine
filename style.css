@@ -114,7 +114,7 @@ a {
 }
 
 body {
-	background-color: #fff;
+	background-color: #ccc;
 }
 
 header nav {
@@ -158,7 +158,7 @@ header .nav-login form input {
 	padding: 0px 10px;
 	margin-right: 10px;
 	border: none;
-	background-color: #ccc;
+	background-color: #fff;
 	font-family: calibri;
 	font-size: 14px;
 	color: #111;
@@ -187,13 +187,9 @@ header .nav-login form button:hover {
 
 header .nav-login a {
 	display: block;
-	width: 60px;
 	border: none;
-	background-color: #fff;
 	font-family: calibri;
-	font-size: 16px;
 	color: #111;
-	line-height: 63px;
 	cursor: pointer;
 }
 
