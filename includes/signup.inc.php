@@ -15,10 +15,10 @@ if (isset($_POST['submit'])) {
 
 	if (empty($first) || (empty($last) || empty($email) || empty($uid) || empty($pwd)) {
 		header ("Location: ../signup.php?signup=empty");
-		exit();
+		exit();	
 	} else {
 		// Check if input characters are valid
-		if (!preg_match("/^[a-zA-Z]*$", $first) || (!preg_match("/^[a-zA-Z]*$", $last)) {
+		if (!preg_match("/^[a-zA-Z]*$/", $first) || (!preg_match("/^[a-zA-Z]*$/", $last)) {
 			header ("Location: ../signup.php?signup=invalid");
 			exit();
 		} else {
@@ -47,7 +47,7 @@ if (isset($_POST['submit'])) {
 		}
 	}
 
-else {
+} else {
 		header ("Location: ../signup.php");
 	exit();
 }
