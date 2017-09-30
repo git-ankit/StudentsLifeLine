@@ -1,3 +1,7 @@
+<?php
+	session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +17,7 @@
 				<li><a href="index.php">Home</a></li>
 			</ul>
 			<div class="nav-login">
-				<form method="POST">
+				<form action="includes/login.inc.php" method="POST">
 					<input type="text" name="uid" placeholder="Username/E-mail">
 					<input type="password" name="pwd" placeholder="Password">
 					<button type="submit" name="submit">Login</button>
