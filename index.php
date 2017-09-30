@@ -1,5 +1,5 @@
 <?php
-	include_once 'header.php';
+	include_once 'includes/header.inc.php';
 ?>
 
 <section class="main-container">
