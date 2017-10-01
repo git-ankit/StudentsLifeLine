@@ -1,11 +1,11 @@
 <?php
 
-if (isset($_GET['submit'])) {
+if (isset($_POST['submit'])) {
 
 	include_once 'dbh.inc.php';
 
-	$notice_did = ($_GET['submit']);
-	echo $notice_did;
+	$notice_did = $_POST['notice_did'];
+	echo 'Selected value is' . $notice_did;
 
 	$sql = "SELECT * FROM 'noticeboard' WHERE notice_did = $notice_did";
 	$result = mysqli_query ($conn, $sql);
