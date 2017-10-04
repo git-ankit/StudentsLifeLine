@@ -9,8 +9,8 @@
 			<input type="text" name="first" placeholder="Firstname">
 			<input type="text" name="last" placeholder="Lastname">
 			<input type="email" name="email" placeholder="E-mail">
-			<input type="text" name="pwd" placeholder="Username" required>
-			<input type="password" name="pwd" placeholder="Password">
+			<input type="text" name="uid" placeholder="Username" required>
+			<input type="password" name="pwd" placeholder="Password" required>
 			<button type="submit" name="submit">Sign up</button>
 		</form>
 	</div>
