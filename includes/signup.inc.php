@@ -29,7 +29,7 @@ if (isset($_POST['submit'])) {
 				exit();
 			} else {
 				// Check for username available or not
-				$sql = "SELECT * FROM `users` WHERE `user_uid`='$uid'";
+				$sql = "SELECT * FROM users WHERE user_uid='$uid'";
 				$result = mysqli_query ($conn, $sql);
 				$resultCheck = mysqli_num_rows ($result);
 

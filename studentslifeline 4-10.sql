@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Oct 04, 2017 at 11:43 AM
+-- Generation Time: Oct 04, 2017 at 11:49 AM
 -- Server version: 5.7.19
 -- PHP Version: 5.6.31
 
@@ -137,16 +137,16 @@ CREATE TABLE IF NOT EXISTS `thread` (
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `firstname` varchar(50) NOT NULL,
-  `lastname` varchar(50) NOT NULL,
-  `username` varchar(50) NOT NULL,
-  `password` varchar(10000) NOT NULL,
-  `email` varchar(100) NOT NULL,
+  `user_first` varchar(50) NOT NULL,
+  `user_last` varchar(50) NOT NULL,
+  `user_uid` varchar(50) NOT NULL,
+  `user_pwd` varchar(10000) NOT NULL,
+  `user_email` varchar(100) NOT NULL,
   `is_staff` varchar(2) NOT NULL,
   `date_joined` datetime NOT NULL,
   `last_login` datetime NOT NULL,
   `is_superadmin` varchar(2) NOT NULL,
-  `status` int(11) NOT NULL DEFAULT '1',
+  `user_status` int(11) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
