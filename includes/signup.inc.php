@@ -29,11 +29,11 @@ if (isset($_POST['submit'])) {
 				exit();
 			} else {
 				// Check for username available or not
-				$sql = "SELECT * FROM users WHERE user_uid='$uid'";
+				$sql = "SELECT * FROM `users` WHERE `user_uid`='$uid'";
 				$result = mysqli_query ($conn, $sql);
-				$resulCheck = mysqli_num_rows($result);
+				$resultCheck = mysqli_num_rows ($result);
 
-				if ($resulCheck > 0) {
+				if ($resultCheck > 0) {
 					header ("Location: ../signup.php?signup=usertaken");
 					exit();
 				} else {
