@@ -179,7 +179,34 @@ header .nav-login form button {
 
 }
 
+
+
 header .nav-login form button:hover {
+
+	background-color: #ccc;
+
+}
+
+header .nav-login form a {
+	float:left;
+	width: 60px;
+	height: 14px;
+	margin-right: 20px;
+	border: none;
+	background-color: #f3f3f3;
+	font-family: calibri;
+	font-size: 14px;
+	color: #111;
+	cursor: pointer;
+	text-align: center;
+	padding: 8px;
+
+
+}
+
+
+
+header .nav-login form a:hover {
 
 	background-color: #ccc;
 

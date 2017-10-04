@@ -13,19 +13,20 @@
 	<nav>
 		<div class="main-wrapper">
 			<ul>
-				<li><a href="index.php">Home</a></li>
-				<li><a href="noticeb.php">Noticeboard</a></li>
+				<li><a href="/StudentsLifeLine/index.php">Home</a></li>
+				<li><a href="/StudentsLifeLine/noticeb.php">Noticeboard</a></li>
 			</ul>
-			<div class="nav-login"">
+			<div class="nav-login">
 				<form action="includes/login.inc.php" method="POST">
 					<input type="text" name="uid" placeholder="Username">
 					<input type="password" name="pwd" placeholder="Password">
 					<button type="submit" name="submit">Login</button>
-					<button><a href="signup.php">Sign up</a></button>
-
+					<a href='/StudentsLifeLine/signup.php'>Sign up</a>
 				</form>
+
 			</div>
 		</div>
 	</nav>
 </header>
 </body>
+</html>
