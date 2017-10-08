@@ -18,7 +18,7 @@
 			</select>
 			<input type="text" name="title" placeholder="Title" required>
 			<textarea name="content" placeholder="Notice Content" required></textarea>
-			<input type="file" name="file" placeholder="Upload a File">
+			<input type="file" name="filename" placeholder="Upload a File">
 			<button type="submit" name="submit">Publish</button>
 		</form>
 	</div>

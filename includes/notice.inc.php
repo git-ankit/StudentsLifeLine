@@ -6,11 +6,15 @@ if (isset($_POST['submit'])) {
 
 	$did = mysqli_real_escape_string($conn, $_POST['notice_did']);
 	$title = mysqli_real_escape_string($conn, $_POST['title']);
-	$content = ($conn, $_POST['content']);
-	$file = ($conn, $_POST['file']);
-	$timestamp = date('Y-m-d G:i:s');
-		
-		$sql = "INSERT INTO `noticeboard` (`notice_did`, `notice_title`, `notice_content`, `notice_attachment`, `notice_time`) VALUES ('$did', '$title', '$content', '$file', '$timestamp')";
+	$content = mysqli_real_escape_string ($conn,$_POST['content']);
+	$fileName = $_FILES['Filename']['name'];
+	$target = "files/";		
+	$fileTarget = $target.$fileName;	
+	$tempFileName = $_FILES["Filename"]["tmp_name"];
+	$fileDescription = $_POST['Description'];	
+	$result = move_uploaded_file($tempFileName,$fileTarget);
+
+		$sql = "INSERT INTO `noticeboard` (`notice_did`, `notice_title`, `notice_content`, `notice_attachment`) VALUES ('$did', '$title', '$content', '$fileName')";
 		if(mysqli_query($conn, $sql) == true) {
 		header("Location: ../noticecreate.php?create=success");	
 	}
