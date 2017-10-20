@@ -288,3 +288,22 @@ header .nav-login a {
 	cursor: pointer;
 	
 }
+
+select {
+  
+    font:18px "arial";
+ 	padding:14px 0px 13px 12px ;
+    margin: 5px;
+    border-radius:3px;
+    background: #ccc;
+    border:none;
+    outline:none;
+    display:inline-block;
+    appearance:none;
+    cursor:pointer;
+    width: 50%;
+}
+
+submit {
+
+}
