@@ -7,8 +7,7 @@
 	$result = $conn->query($sql);
 	$resultCheck = mysqli_num_rows($result);
 	// check if there are any active forums
-	?>
-	<?php div class="main-wrapper" ?>
+	
 	if ($resultCheck == 0) {
 		echo "It seems like there are no more active forums.<Volar Morghulis>";
 	} else {

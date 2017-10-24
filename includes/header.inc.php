@@ -15,6 +15,7 @@
 			<ul>
 				<li><a href="/StudentsLifeLine/index.php">Home</a></li>
 				<li><a href="/StudentsLifeLine/noticeb.php">Noticeboard</a></li>
+				<li><a href="/StudentsLifeLine/forum/showforums.php">Forum</a></li>
 			</ul>
 			<div class="nav-login">
 				<form action="includes/login.inc.php" method="POST">
