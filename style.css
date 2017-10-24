@@ -343,9 +343,7 @@ select {
 }
 
 .box-list {
-	padding-left: 20px;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding: 20px;
 	text-align: left;
 	background-color: white;
 	font-family: calibri;
