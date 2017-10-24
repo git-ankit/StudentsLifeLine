@@ -10,9 +10,9 @@
 		$result_uid = mysqli_query($conn, $query);
 		$row_uid = mysqli_fetch_assoc($result_uid);
 		if($row_uid['is_staff'] == 'N'){
-			return $row_uid['user_uid'].", a student,";
+			return "<h2>".$row_uid['user_uid']."</h2> <br><h3>Student</h3> </br>";
 		}
-		else return $row_uid['user_uid'].", a staff,";
+		else return "<h2>".$row_uid['user_uid']."</h2> <br><h3>Staff</h3> </br>";
 	}
 
 	//Get thread id from previous page
@@ -34,32 +34,71 @@
 		echo "No such forum or forum deleted. Please try again!";
 		exit();
 	}
-	$row_forum_name = $result_forum_name-> fetch_assoc();
-	echo "<center><h3>".$row_forum_name['name']." -> ".$thread['subject']."</h3>";//forum name -> thread name
-	echo "<h4>".$thread['description']."</h4></center>";//description
-	$sql = "SELECT * FROM `post` WHERE `status` = 1 AND `thread_id` = '$id'";
-	$result = $conn->query($sql);
-	$resultCheck = mysqli_num_rows($result);
+	
 	// check if there are any active forums
 	?>
-	
-	<?php  
-	if ($resultCheck == 0) {
-		echo "<center>It seems like there are no more active post for this thread.<Volar Doheris></center>";
-	} else {
-		echo "<center>";
-		while($row = $result->fetch_assoc()) {
-			$user_name = getName($row['user_id'],$conn);	
-		 	echo $user_name." says ".$row['post']."<br/>Created On(IST):".$row['date_created']."<br/><br/><br/>";
-		}
-		echo "</center>"; 		
-	}
-	?>
-	<form action="../includes/postDB.inc.php" method = "POST">
+
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<title>Active Thread</title>
+		<style>
+			table, td, th {    
+		    border: 1px solid #ddd;
+		    text-align: left;
+			}
+
+			table {
+		    border-collapse: collapse;
+		    width: 100%;
+			}
+
+			th, td {
+		    padding: 15px;
+			}
+			</style>
+	</head>
+	<body>
+		<div class="main-container">
+			<div class="box">
+				<div class="box-nav">
+					<?php 
+					echo "<h2>".$thread['subject']."</h2>";//forum name -> thread name
+					$sql = "SELECT * FROM `post` WHERE `status` = 1 AND `thread_id` = '$id'";
+					$result = $conn->query($sql);
+					$resultCheck = mysqli_num_rows($result); ?>
+				</div>
+					<div class="box-list">
+						<table>
+							<tr>
+								<th style="width: 10%">User</th>
+								<th style="width: 60%">Comment</th>
+								<th style="width: 10%">Time</th>
+							</tr>
+
+							<tr>
+								<td>Created By User Name</td>
+								<td><?php echo $thread['description'] ?></td>
+								<td>TIme on which the thread was cregewfs</td>
+							<?php  
+									while($row = $result->fetch_assoc()) {
+									$user_name = getName($row['user_id'],$conn); ?>
+							<tr>
+								<td><?php echo $user_name ?></td>
+								<td><?php echo $row['post'] ?></td>
+								<td><?php echo $row['date_created']?></td>
+							</tr>
+
+						<?php } ?>
+						</table>
+					</div>
+
+	 		
+	<form class="input-form" action="../includes/postDB.inc.php" method = "POST">
 		<center>
-			<textarea name = "post" placeholder="Say something you sexy thing"></textarea><br/>
+			<textarea name = "post" placeholder="Click here to Reply"></textarea><br/>
 			<input type = "hidden" name = "thread_id" value = "<?php echo $id; ?>" />
 			<input type = "hidden" name = "user_id" value = "<?php echo $user_post; ?>" />
-			<input type="submit" name="submit" value = "Post my post."/>
+			<button name="submit" value = "Post my post."/>Reply</button>
 		</center>	
 	</form>
