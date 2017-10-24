@@ -325,6 +325,48 @@ select {
 	font-size: 16px;
 	color: #111;
 	line-height: 20px;
-	
 }
+
+.box {
+	padding: 40px;
+	background-color: #f5b340;
+	border: 1px solid black;
+
+}
+
+.box-nav {
+	height: 55px;
+	text-align: center;
+	background-color: #fad28d;
+	font-family: calibri;
+
+}
+
+.box-list {
+	padding-left: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: left;
+	background-color: white;
+	font-family: calibri;
+}
+
+.box-list h2 {
+	font-family: calibri;
+	font-size: 30px;
+	color: #111;
+	line-height: 50px;
+	text-align: left;
+}	
+
+.box-list a {
+	text-decoration: none;
+}
+
+.box-list a:hover {
+	text-decoration: underline;
+}
+
+.box-list-right {
+	float:right;
 }
