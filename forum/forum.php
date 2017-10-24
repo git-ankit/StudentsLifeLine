@@ -31,7 +31,7 @@
 		//echo "<br/><b><h2>These are the active forums:</b><br/><br/>";
 		while($row = $result->fetch_assoc()) {
 			
-		 	echo "Thread Name: ".$row['name']."<br/>Subject: ".$row['subject']."<br/>Created On(IST):".$row['created_on']."<br/>";
+		 	echo "Thread Name: ".$row['subject']."<br/>Description: ".$row['description']."<br/>Created On(IST):".$row['created_on']."<br/>";
 		 	if($row['anonymous'] == 'Y') echo "Started By: anonymous";
 		 	else {
 		 		$uid = $row['started_by'];
