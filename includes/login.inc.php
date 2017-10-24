@@ -12,14 +12,14 @@ if (isset($_POST['submit'])) {
 	//Error handlers
 	//Check if inputs are empty
 	if (empty($uid) || empty($pwd)) {
-		header("Location ../index.php?login=empty");
+		header("Location: ../index.php?login=empty");
 		exit();
 	} else {
 		$sql = "SELECT * FROM `users` WHERE `user_uid` = '$uid'";
 		$result = mysqli_query($conn, $sql);
 		$resultCheck = mysqli_num_rows($result);
 		if ($resultCheck < 1) {
-			header("Location ../index.php?login=error");
+			header("Location: ../index.php?login=error");
 			exit();
 		} else {
 			if ($row = mysqli_fetch_assoc($result)) {

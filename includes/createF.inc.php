@@ -31,7 +31,7 @@ if (isset($_POST['submit'])) {
 				exit();
 			} else {
 				
-				// Insert the user into the database
+				// Insert the forum into the database
 					
 				$sql = "INSERT INTO `forum` (`name`, `description`, `created_by`) VALUES ('$name', '$description', '$created_by')";
 				if(mysqli_query($conn, $sql) == true) {
