@@ -314,18 +314,6 @@ select {
     width: 50%;
 }
 
-.noticeboard {
-	width: 50%;
-	height: 100px;
-	padding: 0px 5%;
-	border: none;
-	margin-bottom: 3px;
-	background-color: #ccc;
-	font-family: calibri;
-	font-size: 16px;
-	color: #111;
-	line-height: 20px;
-}
 
 .box {
 	padding: 40px;

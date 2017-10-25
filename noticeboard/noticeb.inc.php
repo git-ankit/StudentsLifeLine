@@ -1,18 +1,43 @@
 <?php
 
-	include_once 'dbh.inc.php';
-	include_once 'header.inc.php';
+	include_once '../includes/dbh.inc.php';
+	include_once '../includes/header.inc.php';
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
 	<title>View Noiceboard</title>
+		<style>
+			table, td, th {    
+		    border: 1px solid #ddd;
+		    text-align: left;
+			}
+
+			table {
+		    border-collapse: collapse;
+		    width: 100%;
+			}
+
+			th, td {
+		    padding: 15px;
+			}
+			</style>
 </head>
 <body>
 <section class="main-container">
 	<div class="main-wrapper">
-		<div class="noticeboard">
+		<div class="box">
+			<div class="box-nav">
+				<h2>Notice</h2>
+			</div>
+			<div class="box-list">
+				<table>
+							<tr>
+								<th style="width: 80%">Notice</th>
+								<th style="width: 10%">Time</th>
+							</tr>
+				</table>
 		<?php
 
 if (isset($_POST['submit'])) {
@@ -37,5 +62,6 @@ else {
 				exit();
 }
 
-
+?>
+</div>
 

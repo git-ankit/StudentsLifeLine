@@ -1,5 +1,5 @@
 <?php
-	include_once 'includes/header.inc.php';
+	include_once '../includes/header.inc.php';
 ?>
 
 <section class="main-container">
@@ -7,7 +7,7 @@
 		<h2>Noticeboard</h2>
 	</div>
 	<center>
-	<form class="Noticeboard" action="includes/noticeb.inc.php" method="POST">
+	<form class="input-form" action="noticeb.inc.php" method="POST">
 	<select name="notice_did">
 	  <option value="1">Computer</option>
 	  <option value="2">I.T.</option>

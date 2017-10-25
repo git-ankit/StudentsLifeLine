@@ -71,7 +71,11 @@
 									<td><?php echo $row['created_on'] ?></td> 			
 								</tr>
 								<?php } ?>
+								</form>
 								</table>
+								<form class="input-form" action="createthread.php" method="GET">
+									<input type="hidden" name="id" value="<?php echo $id ?>">
+									<button type="submit" name="submit">Create New Thread</button>
 
 </body>
 </html>

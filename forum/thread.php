@@ -10,9 +10,9 @@
 		$result_uid = mysqli_query($conn, $query);
 		$row_uid = mysqli_fetch_assoc($result_uid);
 		if($row_uid['is_staff'] == 'N'){
-			return "<h2>".$row_uid['user_uid']."</h2> <br><h3>Student</h3> </br>";
+			return "<h2>".$row_uid['user_uid']."</h2> <br><h3>Student</h3></br>";
 		}
-		else return "<h2>".$row_uid['user_uid']."</h2> <br><h3>Staff</h3> </br>";
+		else return "<h2>".$row_uid['user_uid']."</h2> <br><h3>Staff</h3></br>";
 	}
 
 	//Get thread id from previous page
@@ -71,15 +71,27 @@
 					<div class="box-list">
 						<table>
 							<tr>
+								<th style="width: 10%">Created By</th>
+								<th style="width: 60%">Description</th>
+								<th style="width: 10%">Time</th>
+							</tr>
+
+							<tr>
+								<td><?php echo getName($thread['started_by'], $conn) ?></td>
+								<td><?php echo $thread['description'] ?></td>
+								<td><?php echo $thread['created_on'] ?></td>
+							</tr>
+						</table>
+
+					</br>
+
+						<table>
+							<tr>
 								<th style="width: 10%">User</th>
 								<th style="width: 60%">Comment</th>
 								<th style="width: 10%">Time</th>
 							</tr>
 
-							<tr>
-								<td>Created By User Name</td>
-								<td><?php echo $thread['description'] ?></td>
-								<td>TIme on which the thread was cregewfs</td>
 							<?php  
 									while($row = $result->fetch_assoc()) {
 									$user_name = getName($row['user_id'],$conn); ?>
@@ -96,9 +108,10 @@
 	 		
 	<form class="input-form" action="../includes/postDB.inc.php" method = "POST">
 		<center>
-			<textarea name = "post" placeholder="Click here to Reply"></textarea><br/>
+			<textarea name = "post" placeholder="Click here to Reply" style="background-color: white; padding-top: 20px"></textarea><br/>
 			<input type = "hidden" name = "thread_id" value = "<?php echo $id; ?>" />
 			<input type = "hidden" name = "user_id" value = "<?php echo $user_post; ?>" />
+		    </br>
 			<button name="submit" value = "Post my post."/>Reply</button>
 		</center>	
 	</form>
