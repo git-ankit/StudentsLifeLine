@@ -1,7 +1,8 @@
 <?php
+	include_once '../includes/session_manager.inc.php';
 	include_once '../includes/dbh.inc.php';
 	include_once '../includes/header.inc.php';
-	include_once '../includes/session_manager.inc.php';
+	
 
 ?>
 
@@ -24,7 +25,9 @@
 					while($row = $result->fetch_assoc()) {
 						?>
 					 	<a href = <?php echo "forum.php?id=".$row['id'].">" ?><h2><?php echo $row['name']?></h2></a>
-					 	<p><?php echo $row['description']."<br>"?></p><hr>
+					 	<p><?php echo $row['description']."<br>"?></p>
+					 	<a href = <?php echo "/StudentsLifeLine/report.php?id=".$row['id']."&entity=forum>" ?><h5>Report?</h5></a>
+					 	<hr>
 					<?php 
 					} ?>
 				</div>

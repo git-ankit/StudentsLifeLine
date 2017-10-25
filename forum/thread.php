@@ -1,7 +1,8 @@
 <?php
+	include_once '../includes/session_manager.inc.php';
 	include_once '../includes/dbh.inc.php';
 	include_once '../includes/header.inc.php';
-	include_once '../includes/session_manager.inc.php';
+	
 	//getting present user from session
 	$user_post = $_SESSION['u_id'];
 	//some function. Pretty self explanatory
@@ -97,7 +98,12 @@
 									$user_name = getName($row['user_id'],$conn); ?>
 							<tr>
 								<td><?php echo $user_name ?></td>
-								<td><?php echo $row['post'] ?></td>
+								<td>
+									<?php echo $row['post'] ?>
+									<br/>
+									<a href = <?php echo "/StudentsLifeLine/report.php?id=".$row['id']."&entity=post>" ?><h5>Report?</h5></a>
+									
+								</td>
 								<td><?php echo $row['date_created']?></td>
 							</tr>
 

@@ -1,4 +1,5 @@
 <?php
+	include_once '../includes/session_manager.inc.php';
 	include_once '../includes/header.inc.php';
 ?>
 <!DOCTYPE html>

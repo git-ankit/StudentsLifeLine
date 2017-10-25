@@ -1,7 +1,7 @@
 <?php
 
 if (isset($_POST['submit'])) {
-
+	include_once '../includes/session_manager.inc.php';
 	include_once '../includes/dbh.inc.php';
 
 	$did = mysqli_real_escape_string($conn, $_POST['notice_did']);

@@ -1,7 +1,8 @@
 <?php
+	include_once '../includes/session_manager.inc.php';
 	include_once '../includes/dbh.inc.php';
 	include_once '../includes/header.inc.php';
-	include_once '../includes/session_manager.inc.php';
+	
 	
 	//Get forum id from previous page
 	$id = $_GET['id'];
@@ -58,7 +59,11 @@
 								?>
 				
 								<tr>
-									<td><a href = <?php echo "thread.php?id=".$row['id'].">" ?><p><?php echo $row['subject']?></p></a></td>
+									<td>
+										<a href = <?php echo "thread.php?id=".$row['id'].">" ?><p><?php echo $row['subject']?></p></a>
+										<br/>
+										<a href = <?php echo "/StudentsLifeLine/report.php?id=".$row['id']."&entity=thread>" ?><h5>Report?</h5></a>
+									</td>
 									<td><?php if($row['anonymous'] == 'Y') echo "anonymous";
 										 	else {
 										 		$uid = $row['started_by'];

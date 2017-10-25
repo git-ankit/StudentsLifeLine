@@ -15,10 +15,19 @@
 			</ul>
 			<div class="nav-login">
 				<form action="includes/login.inc.php" method="POST">
-					<input type="text" name="uid" placeholder="Username">
-					<input type="password" name="pwd" placeholder="Password">
-					<button type="submit" name="submit">Login</button>
-					<a href='/StudentsLifeLine/signup.php'>Sign up</a>
+					<?php
+						if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true)  {?>
+					<div id = 'logout'>
+						<a href='/StudentsLifeLine/logout.php'>Logout</a>
+					</div>					
+					<?php } else {?>
+					<div id = 'login'>
+						<input type="text" name="uid" placeholder="Username">
+						<input type="password" name="pwd" placeholder="Password">
+						<button type="submit" name="submit">Login</button>
+						<a href='/StudentsLifeLine/signup.php'>Sign up</a>
+					</div>
+					<?php } ?>
 				</form>
 
 			</div>

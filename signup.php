@@ -1,9 +1,8 @@
-<?php
-	include_once 'includes/header.inc.php';
-?>
+
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="/StudentsLifeLine/style.css">
 </head>
 <body>
 <section class="main-container">
@@ -16,6 +15,9 @@
 			<input type="text" name="uid" placeholder="Username" required>
 			<input type="password" name="pwd" placeholder="Password" required>
 			<button type="submit" name="submit">Sign up</button>
+		</form>
+		<form class="input-form" action="index.php" method="POST">
+			<button type="submit" name="goHome">Go to Home Page!</button>
 		</form>
 	</div>
 </section>

@@ -3,7 +3,7 @@
 if (isset($_POST['submit'])) {
 
 	include_once 'dbh.inc.php';
-
+	include_once 'session_manager.inc.php';
 	$first = mysqli_real_escape_string($conn, $_POST['first']);
 	$last = mysqli_real_escape_string($conn, $_POST['last']);
 	$email = mysqli_real_escape_string($conn, $_POST['email']);

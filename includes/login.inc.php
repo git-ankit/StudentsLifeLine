@@ -5,7 +5,7 @@ session_start();
 if (isset($_POST['submit'])) {
 	
 	include 'dbh.inc.php';
-
+	include_once 'session_manager.inc.php';
 	$uid = mysqli_real_escape_string($conn, $_POST['uid']);
 	$pwd = mysqli_real_escape_string($conn, $_POST['pwd']);
 
@@ -35,6 +35,7 @@ if (isset($_POST['submit'])) {
 					$_SESSION['u_last'] = $row['user_last'];
 					$_SESSION['u_email'] = $row['user_email'];
 					$_SESSION['u_uid'] = $row['user_uid'];
+					$_SESSION['admin'] = $row['is_superadmin'];
 					$_SESSION['logged_in'] = true;
 					header("Location: ../index.php?login=sucess");
 					exit();
