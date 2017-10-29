@@ -8,8 +8,12 @@
 		<h2>Home</h2>
 		<?php
 			if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true) {
-				echo "Welcome User";
-			}
+				?>
+				<h2 style="color: Red">Welcome to StudentsLifeLine</h2>
+				</br>
+				<center><img src="includes/aura.jpg" width="300px" height="212.2px"></center>
+				<?php
+							}
 
 			?>
 	</div>
