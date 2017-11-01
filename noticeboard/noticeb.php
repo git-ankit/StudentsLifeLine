@@ -19,6 +19,16 @@
 	<br>
 	<button type="submit" name="submit">Submit</button>
 	</form>
+	<?php if(isset($_SESSION['logged_in']) && $_SESSION['admin'] == 'Y') {
+	?>
+	<form class="input-form" action="noticecreate.php" method="POST">
+	<hr/>
+	<br>
+	<button type="submit" name="submit">Add a noticeboard</button>
+	</form>
+	<?php	
+	}
+	?>
 	</center>
 </section>
 
