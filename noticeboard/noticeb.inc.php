@@ -49,8 +49,10 @@ if (isset($_POST['submit'])) {
 	$resultCheck = mysqli_num_rows ($result);
 	if ($resultCheck >= 1) {
 		while ($row = mysqli_fetch_assoc($result)) {
-			echo $row['notice_title'] . "<br>";
-			echo $row['notice_content'] . "<br>";
+			echo "<b>Name:</b> ".$row['notice_title'] . "<br>";
+			echo "<b>Description:</b> ".$row['notice_content'] . "<br>";
+			echo "<b>File:</b> <a href = '/StudentsLifeLine/Uploads/files/".$row['path']."'>Click Here!</a><br>";
+			echo "<hr/>";
 			}
 		}
 	else {
