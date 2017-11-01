@@ -31,7 +31,13 @@
 					<?php 
 					} ?>
 				</div>
-		</div>
+				<?php if ($_SESSION['admin'] == 'Y') {?>
+				<form class="input-form" action="create.php" method="POST">
+					<br/>
+					<button type="submit" name="submit">Create forum</button>
+				</form>
+				<?php } ?>
+			</div>
 	</div>
 
 </body>

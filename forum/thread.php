@@ -78,7 +78,12 @@
 							</tr>
 
 							<tr>
-								<td><?php echo getName($thread['started_by'], $conn) ?></td>
+								<td>
+									<?php 
+										if($thread['anonymous'] == 'Y') echo "<h2>Anon</h2> <br><h3>A common man.</h3></br>";
+										else echo getName($thread['started_by'], $conn); 
+									?>
+								</td>
 								<td><?php echo $thread['description'] ?></td>
 								<td><?php echo $thread['created_on'] ?></td>
 							</tr>
