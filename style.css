@@ -371,3 +371,12 @@ select {
     padding: 40px;
 	background-color: #f5b340;
 }
+
+.box-contact {
+	border-radius: 15px 50px;
+	border: 2px solid white;
+    background: #73AD21;
+    padding: 40px;
+	background-color: #f5b340;
+	width: 250px;
+}
