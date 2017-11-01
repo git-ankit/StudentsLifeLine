@@ -24,7 +24,7 @@
 	<form class="input-form" action="noticecreate.php" method="POST">
 	<hr/>
 	<br>
-	<button type="submit" name="submit">Add a noticeboard</button>
+	<button type="submit" name="submit">Add a notice</button>
 	</form>
 	<?php	
 	}

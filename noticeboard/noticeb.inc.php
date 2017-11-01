@@ -27,7 +27,7 @@
 <body>
 <section class="main-container">
 	<div class="main-wrapper">
-		<div class="box">
+		<div class="box" style="background: url(noticeboard.jpg); border: 20px solid brown">
 			<div class="box-nav">
 				<h2>Notice</h2>
 			</div>
