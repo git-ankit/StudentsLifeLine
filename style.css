@@ -109,6 +109,10 @@ vertical-align:middle;
 	width: 1000px;
 }
 
+p {
+	font-family: calibri;
+}
+
 a {
 	text-decoration: none;
 }
@@ -318,7 +322,9 @@ select {
 .box {
 	padding: 40px;
 	background-color: #f5b340;
-	border: 1px solid black;
+	border: 2px solid;
+    border-radius: 25px;
+    border-color: white;
 
 }
 
@@ -327,6 +333,7 @@ select {
 	text-align: center;
 	background-color: #fad28d;
 	font-family: calibri;
+ 
 
 }
 
@@ -355,4 +362,12 @@ select {
 
 .box-list-right {
 	float:right;
+}
+
+.box-about {
+	border-radius: 15px 50px;
+	border: 2px solid white;
+    background: #73AD21;
+    padding: 40px;
+	background-color: #f5b340;
 }

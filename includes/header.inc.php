@@ -10,6 +10,7 @@
 		<div class="main-wrapper">
 			<ul>
 				<li><a href="/StudentsLifeLine/index.php">Home</a></li>
+				<li><a href="/StudentsLifeLine/about.php">About us</a></li>
 				<li><a href="/StudentsLifeLine/noticeboard/noticeb.php">Noticeboard</a></li>
 				<li><a href="/StudentsLifeLine/forum/showforums.php">Forum</a></li>
 			</ul>
