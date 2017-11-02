@@ -13,7 +13,7 @@
 		if($row_uid['is_staff'] == 'N'){
 			return "<h2>".$row_uid['user_uid']."</h2> <br><h3>Student</h3></br>";
 		}
-		else return "<h2>".$row_uid['user_uid']."</h2> <br><h3>Staff</h3></br>";
+		else return "<h2>".$row_uid['user_uid']."</h2> <br><h3 style='color:red'>Staff</h3></br>";
 	}
 
 	//Get thread id from previous page
@@ -80,7 +80,7 @@
 							<tr>
 								<td>
 									<?php 
-										if($thread['anonymous'] == 'Y') echo "<h2>Anon</h2> <br><h3>A common man.</h3></br>";
+										if($thread['anonymous'] == 'Y') echo "<h2>Anon.man</h2> <br><h3>A common man</h3></br>";
 										else echo getName($thread['started_by'], $conn); 
 									?>
 								</td>

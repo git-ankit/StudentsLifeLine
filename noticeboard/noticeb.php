@@ -17,7 +17,7 @@
 	</select>
 	<br>
 	<br>
-	<button type="submit" name="submit">Submit</button>
+	<button type="submit" name="submit">View Notice</button>
 	</form>
 	<?php if(isset($_SESSION['logged_in']) && $_SESSION['admin'] == 'Y') {
 	?>

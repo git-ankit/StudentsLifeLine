@@ -46,7 +46,8 @@ if (isset($_POST['submit'])) {
 		while ($row = mysqli_fetch_assoc($result)) {
 			echo "<b>Name:</b> ".$row['notice_title'] . "<br>";
 			echo "<b>Description:</b> ".$row['notice_content'] . "<br>";
-			echo "<b>File:</b> <a href = '/StudentsLifeLine/Uploads/files/".$row['path']."'>Click Here!</a><br>";
+			echo "<b>Time:</b> ".$row['notice_time'] . "<br/>";
+			echo "<b>File:</b> <a href = '/StudentsLifeLine/Uploads/files/".$row['path']."' target='_blank'>Click Here!</a><br>";
 			echo "<hr/>";
 			}
 		}
