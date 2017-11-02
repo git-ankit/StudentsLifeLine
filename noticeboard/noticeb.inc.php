@@ -32,12 +32,7 @@
 				<h2>Notice</h2>
 			</div>
 			<div class="box-list">
-				<table>
-							<tr>
-								<th style="width: 80%">Notice</th>
-								<th style="width: 10%">Time</th>
-							</tr>
-				</table>
+				
 		<?php
 
 if (isset($_POST['submit'])) {

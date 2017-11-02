@@ -13,12 +13,13 @@ if (isset($_POST['submit'])) {
 	$position= strpos($name, "."); 
 	$fileextension= substr($name, $position + 1);
 	$fileextension= strtolower($fileextension);
-	$path= 'C:/wamp64/www/StudentsLifeline/Uploads/files/';
+	$path= 'C:/wamp64/www/StudentsLifeLine/Uploads/files/';
+	$path.$name;
 	if (isset($name) && move_uploaded_file($tmp_name, $path.$name)) {
 
 
 
-		$sql = "INSERT INTO `noticeboard` (`notice_did`, `notice_title`, `notice_content`, `path`) VALUES ('$did', '$title', '$content', '$name')";
+		echo $sql = "INSERT INTO `noticeboard` (`notice_did`, `notice_title`, `notice_content`, `path`) VALUES ('$did', '$title', '$content', '$name')";
 
 		if(mysqli_query($conn, $sql) == true) {
 		header("Location: noticecreate.php?create=success");
